@@ -3,8 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		CDB934252C5F22C2003D151B /* SamplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = CDB934242C5F22C2003D151B /* SamplePackage */; };
+		CDB934322C5FF56C003D151B /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = CDB934312C5FF56C003D151B /* CodeScanner */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CDB934122C5F22AE003D151B /* HotProspects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotProspects.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +24,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDB934322C5FF56C003D151B /* CodeScanner in Frameworks */,
+				CDB934252C5F22C2003D151B /* SamplePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +68,8 @@
 			);
 			name = HotProspects;
 			packageProductDependencies = (
+				CDB934242C5F22C2003D151B /* SamplePackage */,
+				CDB934312C5FF56C003D151B /* CodeScanner */,
 			);
 			productName = HotProspects;
 			productReference = CDB934122C5F22AE003D151B /* HotProspects.app */;
@@ -90,6 +99,10 @@
 				Base,
 			);
 			mainGroup = CDB934092C5F22AE003D151B;
+			packageReferences = (
+				CDB934232C5F22C2003D151B /* XCRemoteSwiftPackageReference "SamplePackage" */,
+				CDB934302C5FF56C003D151B /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = CDB934132C5F22AE003D151B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -250,11 +263,14 @@
 				DEVELOPMENT_TEAM = B7GZG58T32;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QR codes";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save your QR code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -279,11 +295,14 @@
 				DEVELOPMENT_TEAM = B7GZG58T32;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QR codes";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save your QR code";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,6 +338,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CDB934232C5F22C2003D151B /* XCRemoteSwiftPackageReference "SamplePackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/SamplePackage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		CDB934302C5FF56C003D151B /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CDB934242C5F22C2003D151B /* SamplePackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDB934232C5F22C2003D151B /* XCRemoteSwiftPackageReference "SamplePackage" */;
+			productName = SamplePackage;
+		};
+		CDB934312C5FF56C003D151B /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDB934302C5FF56C003D151B /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CDB9340A2C5F22AE003D151B /* Project object */;
 }
